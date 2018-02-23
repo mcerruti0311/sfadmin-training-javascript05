@@ -6,20 +6,29 @@
     <h1> Exercise </h1>
     <i>Write a JavaScript function to remove a given number of characters from
     the end of a string.</i>
+    <br /> This is my string.  How many characters do you want to remove?
+
     <script>
       function displayMyMessage() {
-      var myMessage = "<br /> Today is the first day of the rest of your life!"
-      document.getElementById("div1").innerHTML = myMessage;
-    }
+        var removeCharaters = 0;
+        var thisIsMyString =
+          'This is my string. How many characters do you want to remove?';
+        var stringLength = 0;
+        removeCharacters = prompt("How many characters do you want me to remove?");
+        var out = "<br />";
+        out += "<br /> length: ";
+        out +=  thisIsMyString.length;
+        out += "<br /> slice: ";
+        out += thisIsMyString.slice(0, thisIsMyString.length - removeCharacters);
+      //  removeCharacters = prompt("How many characters do you want to remove?");
+      document.getElementById("div1").innerHTML = out;
+      }
     </script>
-    <script>
-      removeCharacters = prompt("How many characters do you want to remove?")
-    </script>
-  <div01 id="div1"></div01>
-  <script>
-    displayMyMessage();
-  </script>
-  </body>
 
+    <div01 id="div1"></div01>
+    <script>
+      displayMyMessage();
+    </script>
+  </body>
 
 </html>
